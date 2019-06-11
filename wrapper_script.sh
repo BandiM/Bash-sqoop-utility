@@ -23,10 +23,7 @@ echo "********start time: $Start_dt *********"
 
 		chmod 600 $Landing_Location/$Table_list/$Table_list.txt
 
-	      # For 10 tables only. (Between tables 70 to 80 in the list)	
-		#cat $Landing_Location/$Table_list/$Table_list.txt | head -80 | tail -10 | xargs -n 1 -L 1 -P 10 sh $Script_Location/meta_script_varified.sh
-		
-	      # For all available tables from Source
+	     # For all available tables from Source
 		cat $Landing_Location/$Table_list/$Table_list.txt |xargs -n 1 -L 1 -P 10 sh $Script_Location/meta_script_varified.sh
 
 	#fi
